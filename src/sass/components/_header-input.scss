@@ -3,11 +3,14 @@
   height: 40px;
   padding: 10px 30px;
   border: none;
-  color: #777777;
+  color: var(--placeholder-text-color);
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   border-radius: 20px;
-  
+
+  &::placeholder {
+    color: var(--placeholder-text-color);
+  }
 
   @media screen and (max-width: $mobile-max) {
     display: flex;
@@ -16,10 +19,10 @@
 
   &:focus {
     outline: none;
+    color: var(--accent-color);
   }
   &:focus::-webkit-input-placeholder {
     color: var(--accent-color);
-    opacity: 0.3;
     transition: opacity 0.3s ease;
   }
 }
@@ -30,7 +33,7 @@
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  text-shadow: 0 0 5px;
+  // text-shadow: 0 0 5px;
 }
 
 .input-area {
@@ -60,13 +63,19 @@
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; 
+  appearance: none;
+}
 
+select:required:invalid {
+  color: red;
+}
+option[value=''][disabled] {
+  display: none;
 }
 
 select > option {
   color: var(--accent-color);
-  background:  rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   &:hover .countries-item:focus {
     color: var(--white-color);
     background-color: var(--accent-color);
@@ -74,16 +83,13 @@ select > option {
 }
 
 .select.decorated .option:checked {
-  box-shadow: 0 0 10px 100px  var(--accent-color) inset;
+  box-shadow: 0 0 10px 100px var(--accent-color) inset;
 }
-
 
 .countries-item {
   color: var(--accent-color);
   background: rgba(255, 255, 255, 0.2);
 }
-
-
 
 ::-webkit-scrollbar {
   /* 1 - скроллбар */
