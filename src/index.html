@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVENT BOOSTER</title>
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  <!--нормалізатор -->
+  <!--нормализатор -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
     crossorigin="anonymous" />
@@ -21,20 +21,17 @@
 </head>
 
 <body class="bg">
-  <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-  <!-- <include src="./partials/example.html"></include> -->
-
   <!-- Шапка приложения -->
   <include src="./partials/theme-switcher.html"></include>
   <include src="./partials/header.html"></include>
   <div class="borders">
+
     <!-- main (контент страницы) -->
     <div class="container">
       <include src="./partials/gallery-list.html"></include>
       <include src="./partials/pagination.html"></include>
 
       <!-- footer -->
-
       <include src="./partials/footer.html"></include>
     </div>
   </div>
@@ -44,7 +41,6 @@
   <!-- модальное окно -->
   <include src="./partials/modal.html"></include>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
   <script src="./index.js"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/theme-switcher.js"></script>

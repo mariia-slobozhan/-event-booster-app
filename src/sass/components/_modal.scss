@@ -111,7 +111,7 @@
     padding: 70px 40px 70px 40px;
   }
   @media screen and (min-width: $desktop) {
-    padding: 120px 40px 120px 40px;
+    padding: 90px 40px 90px 40px;
   }
 }
 
@@ -124,24 +124,31 @@
 
 .modal_more_button {
   z-index: 3;
-  height: 30px;
+  padding: 3px 10px 3px 10px;
   font-size: 14px;
   font-weight: 500;
   border: 2px solid var(--button);
   border-radius: 5px;
   background-color: inherit;
   color: var(--button);
-  margin-top: 20px;
 
   @media screen and (min-width: $tablet) {
-    width: 170px;
-    height: 40px;
+    padding: 5px 10px 5px 10px;
     font-size: 16px;
+  }
+}
+.more_btn_container {
+  margin-top: 20px;
+  width: 145px;
+
+  @media screen and (min-width: $tablet) {
+    width: 300px;
   }
 }
 
 .modal_more_button:hover {
   border: 1px solid var(--accent-color);
+  color: var(--accent-color);
 }
 
 .modal-title {
@@ -248,7 +255,7 @@
     max-width: 200px;
   }
   @media screen and (min-width: $desktop) {
-    max-width: 350px;
+    max-width: 300px;
   }
 }
 
