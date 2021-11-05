@@ -31,7 +31,8 @@ export const state = {
 };
 
 export async function onLoadPage() {
-  const data = await fetchEvents(state.query, state.page, state.classification, state.country);
+  const country = "PL"
+  const data = await fetchEvents(state.query, state.page, state.classification, country);
   clearGalleryMarkup();
   createGalleryMarkup(data);
   renderModal(data);
