@@ -27,12 +27,10 @@ export const state = {
   query: '',
   classification: 'music',
   country: '',
-  code: '',
 };
 
 export async function onLoadPage() {
-  const country = "ES"
-  const data = await fetchEvents(state.query, state.page, state.classification, country);
+  const data = await fetchEvents(state.query, state.page, state.classification, state.country);
   clearGalleryMarkup();
   createGalleryMarkup(data);
   renderModal(data);
